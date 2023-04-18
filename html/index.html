@@ -14,7 +14,9 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        
+    <script>
+       
+    </script>
 </head>
 
 <body>
@@ -374,18 +376,17 @@
             </fieldset>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-          
+            <p>Chưa có tài khoản ? <a href="#" class="login">Tạo tài khoản</a></p>
         </div>
       </div>
     </div>
   </div>
 
    <!-- Modal signup -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupModal">
+
+   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupModal">
     Đăng Kí
   </button>
-  
   <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -402,23 +403,26 @@
                 <form class="formsig">
                     <div class="form-group">
                       <label for="emailInput">Địa chỉ email</label>
-                      <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Nhập địa chỉ email của bạn">
+                      <input required="required" type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Nhập địa chỉ email của bạn">
                     </div>
                     <div class="form-group">
                       <label for="passwordInput">Mật khẩu</label>
-                      <input type="password" class="form-control" id="passwordInput" placeholder="Nhập mật khẩu của bạn">
+                      <input required="required" type="password" class="form-control" id="passwordInput" placeholder="Nhập mật khẩu của bạn">
                     </div>
-                    <div class="form-group form-check">
-                      <input type="checkbox" class="form-check-input" id="rememberCheck">
-                      <label class="form-check-label" for="rememberCheck">Ghi nhớ tài khoản của tôi</label>
-                    </div>
+                    <div class="form-group">
+                        <label for="repassword">Xác nhận mật khẩu</label>
+                        <input required="required" type="password" class="form-control" id="repassword" placeholder="Xác nhận mật khẩu">
+                      </div>
+                      <div class="form-group">
+                        <label for="fnameInput">Nhập họ tên</label>
+                        <input required="required" type="text" class="form-control" id="fnameInput"  placeholder="Họ và tên">
+                      </div>
                     <button type="button" class="btn btn-primary">Đăng nhập</button>
                   </form>
             </fieldset>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-          
+            <p>Đã có tài khoản ? <a href="#" class="create">Đăng nhập</a></p>
         </div>
       </div>
     </div>

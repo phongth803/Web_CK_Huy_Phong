@@ -26,8 +26,8 @@
     display: flex;
     justify-content: space-between;
     margin: 0 20px;
+    position: relative;
 }
-
 
 .header .menu_bar_cover li
 {
@@ -368,8 +368,6 @@
 
 }
 
-
-
 .modal-body {
     border: none;
     padding: 0px 72px;
@@ -391,10 +389,14 @@
     margin: auto;
 }
 
-.form-group {
+#loginModal .form-group {
     margin-bottom: 50px;
+}
+
+.form-group {
     font-size: 20px;
 }
+
 .title h1 {
     margin-bottom: 55px;
     font-size: 30px;
@@ -410,5 +412,8 @@
 
 .modal-footer {
     border: none;
+}
+.modal-footer p{
+    font-size: 20px;
 }
   
