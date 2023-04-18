@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SamSung</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        
 </head>
+
 <body>
     <header class="header">
         <div class="logo_bar">
@@ -23,13 +32,13 @@
             </ul>
         </div>
         <div class="side_bar">
-            <ul class="side_bar_cover">     
+            <ul class="side_bar_cover">
                 <li><a href="#">Hỗ trợ</a></li>
                 <li><a href="#">Doanh nghiệp</a></li>
                 <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
                 <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
-            </ul>   
+            </ul>
         </div>
     </header>
     <div class="bodyy">
@@ -105,14 +114,14 @@
                         <li><a href="#"><input type="radio" name="" id="">One Remote Control</a></li>
                     </ul>
                 </div>
-                
+
             </div>
             <div class="buy_information">
 
                 <!-- PRODUCT 01  -->
                 <div class="product__">
                     <div class="product_img">
-                        <a href="">     
+                        <a href="">
                             <img src="../img/Product/product_crystal_uhd_cu8000.webp" alt="">
                         </a>
                     </div>
@@ -171,7 +180,7 @@
                         <div class="location"><a href=""><i class="fas fa-map-marker-alt"></i> Nơi mua</a></div>
                     </div>
                 </div>
-                
+
                 <!-- PRODUCT 04 -->
                 <div class="product__">
                     <div class="product_img">
@@ -264,7 +273,7 @@
                     </div>
                 </div>
 
-                
+
             </div>
         </div>
 
@@ -294,7 +303,7 @@
                 <h2>Bạn cần hỗ trợ</h2>
                 <p class="p_footer_box">Hỗ trợ mua trực tuyến</p>
                 <p class="p_footer_box">Đặt lịch sửa chữa</p>
-                <p class="p_footer_box">Trung tâm bảo hành</p> 
+                <p class="p_footer_box">Trung tâm bảo hành</p>
             </div>
             <div class="foot_box">
                 <h2>Giới thiệu về chúng tôi</h2>
@@ -327,5 +336,95 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Modal login -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+    Đăng nhập
+  </button>
+  
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="title">
+                <h1>Đăng nhập Samsung account của bạn</h1>
+            </div>
+            <fieldset>
+                <form class="formsig">
+                    <div class="form-group">
+                      <label for="emailInput">Địa chỉ email</label>
+                      <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Nhập địa chỉ email của bạn">
+                    </div>
+                    <div class="form-group">
+                      <label for="passwordInput">Mật khẩu</label>
+                      <input type="password" class="form-control" id="passwordInput" placeholder="Nhập mật khẩu của bạn">
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="rememberCheck">
+                      <label class="form-check-label" for="rememberCheck">Ghi nhớ tài khoản của tôi</label>
+                    </div>
+                    <button type="button" class="btn btn-primary">Đăng nhập</button>
+                  </form>
+            </fieldset>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Modal signup -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupModal">
+    Đăng Kí
+  </button>
+  
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="title">
+                <h1>Tạo tài khoản Samsung của bạn</h1>
+            </div>
+            <fieldset>
+                <form class="formsig">
+                    <div class="form-group">
+                      <label for="emailInput">Địa chỉ email</label>
+                      <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Nhập địa chỉ email của bạn">
+                    </div>
+                    <div class="form-group">
+                      <label for="passwordInput">Mật khẩu</label>
+                      <input type="password" class="form-control" id="passwordInput" placeholder="Nhập mật khẩu của bạn">
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="rememberCheck">
+                      <label class="form-check-label" for="rememberCheck">Ghi nhớ tài khoản của tôi</label>
+                    </div>
+                    <button type="button" class="btn btn-primary">Đăng nhập</button>
+                  </form>
+            </fieldset>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
 </body>
+
 </html>

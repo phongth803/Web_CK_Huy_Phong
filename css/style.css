@@ -342,3 +342,73 @@
     opacity: .7;
     color: red;
 }
+/* modal */
+.btn-primary {
+    background-color: #142F4E;
+    color: #fff;
+  }
+
+.modal-dialog {
+    margin: auto;
+    max-width: 100%;
+}
+  
+.modal-content {
+    padding: 5px 10px;
+    height: 640px;
+    background-color: #fcfcfc;
+    border-radius: 26px;
+    min-width: 640px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.modal-header {
+    border: none;
+
+}
+
+
+
+.modal-body {
+    border: none;
+    padding: 0px 72px;
+}
+
+.modal-body .form-control{
+    display: block;
+    width: 100%;
+    color: #909090;
+    border: none;
+    border-bottom: 1px solid #8c8c8c;
+    background-color: transparent;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+.modal-body .formsig {
+    width: 80%;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+.title h1 {
+    margin-bottom: 55px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.modal-body button.btn.btn-primary {
+    width: 100%;
+    background: #0381FE;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.modal-footer {
+    border: none;
+}
+  
