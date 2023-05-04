@@ -363,11 +363,13 @@
                                     <label for="emailInput">Địa chỉ email</label>
                                     <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp"
                                         placeholder="Nhập địa chỉ email của bạn">
+                                    <span id="tb_email" style="color: red;"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="passwordInput">Mật khẩu</label>
                                     <input type="password" class="form-control" id="passwordInput"
                                         placeholder="Nhập mật khẩu của bạn">
+                                    <span id="tb_passDN" style="color: red;"></span>
                                 </div>
                                 <div class="form-group form-check">
                                     <input type="checkbox" class="form-check-input" id="rememberCheck">
@@ -388,23 +390,29 @@
                                     <label for="reemailInput">Địa chỉ email</label>
                                     <input required="required" type="email" class="form-control" id="reemailInput"
                                         aria-describedby="emailHelp" placeholder="Nhập địa chỉ email của bạn">
+                                    <span id="tb_Email_DK" style="color: red;"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="repasswordInput">Mật khẩu</label>
                                     <input required="required" type="password" class="form-control" id="repasswordInput"
                                         placeholder="Nhập mật khẩu của bạn">
+                                    <span id="tb_passDK" style="color: red;"></span>
+
                                 </div>
                                 <div class="form-group">
                                     <label for="repassword">Xác nhận mật khẩu</label>
                                     <input required="required" type="password" class="form-control" id="repassword"
                                         placeholder="Xác nhận mật khẩu">
+                                    <span id="tb_repassDK" style="color: red;"></span>
+                                        
                                 </div>
                                 <div class="form-group">
                                     <label for="fnameInput">Nhập họ tên</label>
                                     <input required="required" type="text" class="form-control" id="fnameInput"
                                         placeholder="Họ và tên">
+                                        <span id="tb_HoTen" style="color: red;"></span>
                                 </div>
-                                <button type="button" class="btn btn-primary">Đăng nhập</button>
+                                <button type="button" class="btn btn-primary">Đăng kí</button>
                             </form>
                         </fieldset>
                         <p>Đã có tài khoản ? <a href="#" class="login">Đăng nhập</a></p>
@@ -430,6 +438,87 @@
             main.classList.remove('signupForm')
         }
 
+        function KTDN(){
+                var rgc = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if(  rgc.test($("#emailInput").val()) == true ) {
+                    $("#tb_email").html("Email hợp lệ");  
+                    return true;
+                } else {
+                    $("#tb_email").html("Email không hợp lệ");          
+                    return false;
+                }
+        }
+        $("#emailInput").blur(KTDN);
+
+        function KTMK(){
+                var rgc = /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{10,20}$/;
+                if(  rgc.test($("#passwordInput").val()) == true ) {
+                    $("#tb_passDN").html("Mật khẩu hợp lệ");  
+                    return true;
+                } else {
+                    $("#tb_passDN").html("Mật khẩu không hợp lệ");          
+                    return false;
+                }
+        }
+        $("#passwordInput").blur(KTMK);
+
+
+        function KTDangKy(){
+                var rgc = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if(  rgc.test($("#reemailInput").val()) == true ) {
+                    $("#tb_Email_DK").html("Email hợp lệ");  
+                    return true;
+                } else {
+                    $("#tb_Email_DK").html("Email không hợp lệ");          
+                    return false;
+                }
+        }        
+        $("#reemailInput").blur(KTDangKy);
+
+        function KTDangKyMK(){
+                var rgc = /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{10,20}$/;
+                if(  rgc.test($("#repasswordInput").val()) == true ) {
+                    $("#tb_passDK").html("Mật khẩu hợp lệ");  
+                    return true;
+                } else {
+                    $("#tb_passDK").html("Mật khẩu không hợp lệ");          
+                    return false;
+                }
+        }
+        $("#repasswordInput").blur(KTDangKyMK);
+
+
+        function KiemtraNhapLaiMK(){
+            const passwordInput = document.getElementById("repasswordInput");
+            const password = passwordInput.value;
+
+            const confirmPasswordInput = document.getElementById("repassword");
+            const confirmPassword = confirmPasswordInput.value;
+            if (password === confirmPassword){
+                $("#tb_repassDK").html("Mật khẩu đã trung khớp");  
+                    return true;
+                } else {
+                    $("#tb_repassDK").html("Mật khẩu không trùng khớp");          
+                    return false;
+                }
+        }
+        $("#repassword").blur(KiemtraNhapLaiMK);
+
+
+        function KiemtraHoTen() {
+            var rgc = /^[A-Z][a-z]*(\s[A-Z][a-z]*)*$/;
+            if(  rgc.test($("#fnameInput").val()) == true ) {
+                    $("#tb_HoTen").html("Tên hợp lệ");  
+                    return true;
+                } else {
+                    $("#tb_HoTen").html("Tên không hợp lệ");          
+                    return false;
+                }
+        }
+        $("#fnameInput").blur(KiemtraHoTen);
+        
+
+        
     </script>
 </body>
 
