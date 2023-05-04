@@ -14,10 +14,14 @@
 .header{
     display: flex;
     justify-content: space-between;
+    text-align: center;
     height: 60px;
     align-items: center;
     box-shadow: 0 .5px  rgba(0, 0, 0, .2);
-    margin: 0 2%;
+    margin-left: 10%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 .header .menu_bar_cover,
@@ -78,25 +82,25 @@
 }
 
 .banner_container .banner.banner1{
-    background: url(/img/banner/1366x326_.jpg);
+    background: url(../img/banner/1366x326_.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .banner_container .banner.banner2{
-    background: url(/img/banner/2021_PF_KV_CrystalUHD_PC.webp);
+    background: url(../img/banner/2021_PF_KV_CrystalUHD_PC.webp);
     background-size: cover;
     background-position: center;
 }
 
 .banner_container .banner.banner3{
-    background: url(/img/banner/2021_PF_KV_QLED_PC.webp);
+    background: url(../img/banner/2021_PF_KV_QLED_PC.webp);
     background-size: cover;
     background-position: center;
 }
 
 .banner_container .banner.banner4{
-    background: url(/img/banner/2022-help-me-choose-pf-kv-pc.webp);
+    background: url(../img/banner/2022-help-me-choose-pf-kv-pc.webp);
     background-size: cover;
     background-position: center;
 }
@@ -160,7 +164,7 @@
 .above_tv_show { 
     display: flex;
     justify-content: space-between;
-    margin: 290px 10px 0px 10px;
+    margin: 360px 10px 0px 10px;
     box-shadow: 0 .5px  rgba(0, 0, 0, .6);
     padding-bottom: 2px;
 }
