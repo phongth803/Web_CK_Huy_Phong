@@ -11,6 +11,9 @@
 }
 
 /* Header */
+.header img {
+    width: 100px;
+}
 .header{
     display: flex;
     justify-content: space-between;
@@ -18,10 +21,12 @@
     height: 60px;
     align-items: center;
     box-shadow: 0 .5px  rgba(0, 0, 0, .2);
-    margin-left: 10%;
+    padding-left: 10%;
+    width: 100%;
     position: fixed;
     top: 0;
     z-index: 1000;
+    background-color: #fff;
 }
 
 .header .menu_bar_cover,

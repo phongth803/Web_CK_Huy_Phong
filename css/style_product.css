@@ -11,6 +11,11 @@
 }
 
 /* Header */
+
+.header img {
+    width: 100px;
+}
+
 .header{
     display: flex;
     justify-content: space-between;
