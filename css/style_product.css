@@ -1,0 +1,112 @@
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    text-decoration: none;
+    list-style-type: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    box-shadow: 0 .5px  rgba(0, 0, 0, .2);
+    margin: 0 2%;
+}
+
+.header .menu_bar_cover,
+.header .side_bar_cover
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+
+.header .menu_bar_cover li
+{
+    margin: 0 10px;
+    padding: 3px 6px;
+}
+.header .side_bar_cover li
+{
+    margin: 0 6px;
+    padding: 2px 2px;
+}
+.header .menu_bar_cover li a,
+.header .side_bar_cover li a
+{
+    height: 100%;
+    width: 100%;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.header .menu_bar_cover li:hover,
+.header .side_bar_cover li:hover{
+    box-shadow: 0 2px  rgba(0, 0, 0, .6),
+    0 2.25px  rgba(116, 37, 37, 0.6),
+    0 2.5px  rgba(168, 38, 38, 0.6),
+    0 2.75px  rgba(122, 20, 20, 0.6);
+    transition: all .35s ease-in-out;
+    opacity: .7;
+    color: red;
+}
+
+
+.sub_header
+{
+    height: 6rem;
+    background: #000;
+    color: #fff;
+}
+.sub_header .name_price_Mess
+{
+    display: flex;
+    margin: 0 6%;
+    justify-content: space-between;    
+    padding-top: .5em;
+}
+.sub_header .name_price_Mess .pricr_mess
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub_header .name_price_Mess .pricr_mess h4{
+    margin-right: 1em;
+    line-height: 2em;
+}
+
+.sub_header .name_price_Mess .pricr_mess a{
+    color: #000;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+}
+
+.sub_header .name_price_Mess .btn_mess{
+    background: rgb(127, 127, 227);
+    padding: .4em .8em;
+    margin-bottom: .2em;
+    border-radius: .8em;
+}
+
+
+.sub_header .name_price_Mess li:hover{
+    box-shadow: 0 2px  rgba(255, 255, 255 , 0.9),
+    0 2.25px  rgba(255, 255, 255 , 0.9),
+    0 2.5px  (255, 255, 255 , 0.9),
+    0 2.75px  (255, 255, 255 , 0.9);
+    transition: all .35s ease-in-out;
+    opacity: .7;
+}
