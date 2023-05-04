@@ -342,6 +342,10 @@
     opacity: .7;
     color: red;
 }
+.p_footer_box{
+    color: #000;
+    display: block; 
+}
 /* modal */
 .btn-primary {
     background-color: #142F4E;
