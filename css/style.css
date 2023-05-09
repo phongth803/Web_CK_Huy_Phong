@@ -21,7 +21,7 @@
     height: 60px;
     align-items: center;
     box-shadow: 0 .5px  rgba(0, 0, 0, .2);
-    padding-left: 10%;
+    padding-left: 0%;
     width: 100%;
     position: fixed;
     top: 0;
@@ -267,13 +267,14 @@
 
 .buy_information  .product__  .product_function .btn__buy
 {
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: 1px solid #000;
     text-align: center;
     margin: 30px 0 10px 0 ;
 }
-
+.carttttt-btn {
+    background: #0381FE !important;
+    padding: 12px 96px;
+    border-radius: 50px;
+}
 .buy_information  .product__  .product_function .btn__buy a
 {
     color: #000;
@@ -439,3 +440,11 @@
 
 }
 
+table td {
+    background-color: #f0f0f0;
+    text-align: center;
+    vertical-align: middle !important; 
+  }
+  
+
+ 
