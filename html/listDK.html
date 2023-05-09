@@ -239,26 +239,46 @@
         
         var i = 1;
 
+        
+        
         $("#dangki-btn").click(function(){    
-            i = i +1 ;       
+            i = i + 1 ;       
             if ( !KTDangKy() || !KTDangKyMK() || !KiemtraNhapLaiMK || !KiemtraHoTen ){
                 alert("Mời bạn nhập đúng và đủ thông tin");
                 return false;
-            }else {     
+            } else {
                 var email = $("#reemailInput").val();
                 var passs = $("#repasswordInput").val();
                 var namee = $("#fnameInput").val();
+
+                // Kiểm tra email đã tồn tại trong local storage hay chưa
+                var users = JSON.parse(localStorage.getItem('users') || '[]');
+                var isEmailExist = users.some(function(user) {
+                    return user.email === email;
+                });
+
+                if (isEmailExist) {
+                    alert('Email đã tồn tại');
+                    return false;
+                }
+
+                // Lưu thông tin vào local storage
+                var newUser = {
+                    email: email,
+                    password: passs,
+                    name: namee
+                };
+                users.push(newUser);
+                localStorage.setItem('users', JSON.stringify(users));
+
                 var them1 = "<tr> <td>" + (i) + "</td><td>" + email + "</td><td>" +  namee + "</td><td>" + passs + "</td></tr>";
                 $("table tbody").append(them1);
-                return true;          
-                $("#SignInModal").modal("hide");                    
+                $("#SignInModal").modal("hide");
+                return true;
             }
-        })               
+        });  
 
-        
-
-        
-   </script>
+    </script>
     
     
 </body>
