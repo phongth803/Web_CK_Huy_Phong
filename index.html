@@ -495,15 +495,33 @@
 
 
         function KTDN(){
-                var rgc = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if(  rgc.test($("#emailInput").val()) == true ) {
-                    $("#tb_email").html("Email hợp lệ");  
+            var rgc = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(rgc.test($("#emailInput").val()) == true ) {
+                $("#tb_email").html("Email hợp lệ");                
+                // Lấy thông tin người dùng từ localStorage
+                var users = JSON.parse(localStorage.getItem('users') || '[]');
+                var email = $("#emailInput").val();
+                var password = $("#passwordInput").val();
+
+                // Kiểm tra thông tin đăng nhập
+                var isUserExist = users.some(function(user) {
+                    return user.email === email
+                });
+
+                if (isUserExist) {                    
                     return true;
                 } else {
-                    $("#tb_email").html("Email không hợp lệ");          
+                    alert('Email chưa được cấp tài khoản');
+                    $("#tb_email").html("Email hợp lệ nhưng chưa được cấp tài khoản");
                     return false;
                 }
+                
+            } else {
+                $("#tb_email").html("Email không hợp lệ");          
+                return false;
+            }
         }
+
         $("#emailInput").blur(KTDN);
 
         function KTMK(){
